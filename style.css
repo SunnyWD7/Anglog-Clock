@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:black;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    position: relative;
+
+}
+.clock{
+     height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg *var(--i)));
+    inset: 12px;
+    text-align: center;
+    color: white;
+}
+.clock span b{
+    transform: rotate(calc(-30deg *var(--i)));
+    display: inline-block;
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+}
+.clock::before{
+    content: " ";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: green;
+}
+.hand{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.hand i{
+  position: absolute;  
+  background-color: var(--clr);
+  width: 7px;
+  height: 80px;
+  border-radius: 8px;
+}
